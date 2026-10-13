@@ -1,115 +1,292 @@
 
-/* Ümumi düzəlişlər */
-* {
     box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
-}
-
-body {
-    margin: 0;
-    overflow-x: hidden;
+    height: auto;
 }
 
 header {
+    position: relative;
+    height: 100vh;
+    min-height: 550px;
     background-size: cover;
     background-position: center;
 }
 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#fitnessfirst,
+#yourbody,
+#lifestyle,
+#summeroffun,
+#grape,
+#mango,
+#footer {
+    background-size: cover;
+    background-position: center;
+}
+
+/* =========================
+   TELEFON
+========================= */
 nav {
-    padding: 25px 20px;
+    padding: 20px 15px;
+}
+
+#logo {
+    display: block;
+    text-align: center;
+}
+
+#logo img {
+    max-width: 150px;
 }
 
 menu {
-    margin: 0;
-    padding: 10px 0;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
 }
 
 menu li {
-    display: inline-block;
-    padding: 8px;
+    list-style: none;
+    padding: 5px;
 }
 
 menu li a {
     font-size: 12px;
+    letter-spacing: 0;
 }
 
 #title {
-    bottom: 80px;
-    padding: 0 20px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 60px;
+    padding: 0 15px;
+    text-align: center;
 }
 
-#about3 {
-    padding: 40px 20px;
+h1 {
+    font-size: 28px;
 }
 
-#about3 .col33 {
-    padding: 22px 15px;
+h5 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-#art4 {
-    padding: 40px 0;
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Bütün sütunlar telefonda alt-alta */
+.col25,
+.col33,
+.col66,
+.col100 {
+    width: 100%;
+    float: none;
+}
+
+.fleft,
+.fright {
+    float: none;
+}
+
+/* Yaşıl sahədəki 4 məqalə */
+article#art4 {
+    width: 100%;
+    float: none;
+    padding: 25px 20px;
+}
+
+/* Şəkilli və mətnli bloklar */
+.vh50 {
+    height: auto;
+    min-height: 300px;
 }
 
 .artpadding {
-    padding: 35px 20px;
+    padding: 30px 20px;
 }
 
-.vh50 {
-    min-height: 50vh;
-    height: auto;
-}
-
-.vh100 {
-    min-height: 100vh;
+/* Footer */
+#footer {
+    min-height: 400px;
     height: auto;
 }
 
 footer .txt {
-    padding: 100px 20px;
+    text-align: center;
+    padding: 120px 20px;
 }
 
 footer .txt #p1 {
-    font-size: 2em;
+    font-size: 28px;
+    line-height: 1.3;
 }
 
-/* KOMPÜTER */
+footer .txt #p2 {
+    font-size: 14px;
+}
+
+footer .bg-goy #about3 {
+    padding: 25px 20px;
+}
+
+#p4 {
+    font-size: 18px;
+}
+
+#p5 {
+    font-size: 14px;
+}
+
+#about3 i {
+    font-size: 35px;
+    margin-right: 8px;
+}
+
+/* =========================
+   KOMPÜTER
+========================= */
 @media only screen and (min-width: 768px) {
+
+    .container {
+        max-width: 1180px;
+        width: 100%;
+        margin: auto;
+    }
+
+    header {
+        min-height: 600px;
+    }
+
     nav {
         padding: 40px 50px;
     }
 
+    #logo {
+        display: inline-block;
+        text-align: left;
+    }
+
     menu {
         float: right;
+        display: block;
+        margin: 0;
+        padding: 10px 0;
     }
 
     menu li {
-        padding: 0 1.8vw;
+        display: inline-block;
+        padding: 0 1.2vw;
+    }
+
+    menu li a {
+        font-size: 0.9em;
+        letter-spacing: 1px;
     }
 
     #title {
-        bottom: 140px;
-        width: initial;
+        width: auto;
         left: 100px;
+        bottom: 140px;
         padding: 0;
+        text-align: left;
     }
 
-    #about3 {
-        padding: 66px 40px;
+    h1 {
+        font-size: 2.5em;
     }
 
-    #about3 .col33 {
-        padding: 22px 25px;
+    h5 {
+        font-size: 1em;
+        text-align: right;
+        padding: 10px 20px;
+    }
+
+    /* Sütunlar kompüterdə yan-yana */
+    .col25 {
+        width: 25%;
+        float: left;
+    }
+
+    .col33 {
+        width: 33.3333%;
+        float: left;
+    }
+
+    .col66 {
+        width: 66.6667%;
+        float: left;
+    }
+
+    .col100 {
+        width: 100%;
+        float: none;
+    }
+
+    .fleft {
+        float: left;
+    }
+
+    .fright {
+        float: right;
+    }
+
+    article#art4 {
+        width: 25%;
+        padding: 34px 15px;
     }
 
     .vh50 {
         height: 50vh;
+        min-height: 300px;
     }
 
-    .vh100 {
-        height: 100vh;
+    .artpadding {
+        padding: 50px 35px;
+    }
+
+    #about3 {
+        padding: 30px 20px;
+    }
+
+    footer .bg-goy > #about3 {
+        padding: 45px 30px;
+    }
+
+    footer .bg-goy > #about3 > .col33 {
+        padding: 20px;
     }
 
     footer .txt {
@@ -118,5 +295,9 @@ footer .txt #p1 {
 
     footer .txt #p1 {
         font-size: 2.8em;
+    }
+
+    footer .txt #p2 {
+        font-size: 1em;
     }
 }
