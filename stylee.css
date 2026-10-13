@@ -1,137 +1,122 @@
-:root{
-    --yasil: #a1c927;
-    --qirmizi: #fd634d;
+
+/* Ümumi düzəlişlər */
+* {
+    box-sizing: border-box;
 }
-header{
-    position: relative;
-    height: 100vh;
-    background: url("img/headerbg.jpg") 55% 50% /cover;
-    text-align: center;
+
+img {
+    max-width: 100%;
 }
-nav{
-    padding: 40px 50px;
+
+body {
+    margin: 0;
+    overflow-x: hidden;
 }
-menu{
+
+header {
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    padding: 25px 20px;
+}
+
+menu {
+    margin: 0;
     padding: 10px 0;
 }
-menu li a{
-    font: .9em 'Avenir Next Rounded Std';
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #fff;;
-}
-#title { 
-    position: absolute;
-    width: 100%;
-    bottom: 140px;
-}
-h1, h5 {
-    font-family: 'Myriad Pro';
-    text-transform: uppercase;
-}
-h1 { font-size: 2em }
-h2 {
-    font: 2.1em 'Open Sans', sans-serif;
-    text-transform: uppercase;
-}
-h3 {
-    font: 1.5em 'Open Sans', sans-serif;
-    padding: 1em 0; 
-}
-h5 {
-    font-size: 1em;
-    letter-spacing: 3px;
-}
-h6 {
-    font: .8em Montserrat;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+
+menu li {
+    display: inline-block;
+    padding: 8px;
 }
 
-footer .txt{
-    text-align: center;
-    padding:250px 0 ;
+menu li a {
+    font-size: 12px;
 }
-footer .txt #p1{
-    font: 2.8em Open Sans;
-    color: #fff;
-    padding-bottom: 10px;
-}
-footer .txt #p2{
-    font: 1em Open Sans;
-    color: #fff;
-}
-#p4{
-    font: 1em Open Sans;
-    padding-bottom: 10px;
-}
-#p5{
-    font: 1em Open Sans;
-    color: #8297a7;
-}
-#about3 i{
-    font-size: 51px;
-}
-#about3 {padding:66px 200px ;}
-#about3 .col33 { padding: 22px 40px;}
 
-#art4 { padding: 68px 0;}
-article .col25 { padding: 34px 10px; }
-article i {font-size: 2.7em; }
+#title {
+    bottom: 80px;
+    padding: 0 20px;
+}
 
-.bg-yasil { background-color: var(--yasil) }
-.bg-qirmizi { background-color: var(--qirmizi) }
-.bg-ag { background-color: #fff }
-.bg-goy{background-color: #0d1119;}
-.txt-yasil { color: var(--yasil) }
-.txt-qirmizi { color: var(--qirmizi) }
-.txt-ag { color: #fff }
-.vh50 { height: 50vh; }
-.vh100 {height: 100vh;}
-.artpadding { padding: 50px 40px }
-.acenter { text-align: center;}
+#about3 {
+    padding: 40px 20px;
+}
 
-#fitnessfirst { background: url('img/fitnessfirst.jpg') center/cover; }
-#yourbody { background: url('img/yourbody.jpg') center/cover; }
-#lifestyle { background: url('img/lifestyle.jpg') center/cover; }
-#summeroffun { background: url('img/summeroffun.jpg') center/cover; }
-#grape { background: url('img/grape.jpg') center/cover; }
-#mango { background: url('img/mango.jpg') center/cover; }
-#footer{ background: url('img/footer.jpg') center/cover;}
+#about3 .col33 {
+    padding: 22px 15px;
+}
 
+#art4 {
+    padding: 40px 0;
+}
+
+.artpadding {
+    padding: 35px 20px;
+}
+
+.vh50 {
+    min-height: 50vh;
+    height: auto;
+}
+
+.vh100 {
+    min-height: 100vh;
+    height: auto;
+}
+
+footer .txt {
+    padding: 100px 20px;
+}
+
+footer .txt #p1 {
+    font-size: 2em;
+}
+
+/* KOMPÜTER */
 @media only screen and (min-width: 768px) {
-    .container { 
-        max-width: 1180px;
-        margin: auto
+    nav {
+        padding: 40px 50px;
     }
-    header{
-        text-align: initial;
-    }
-    menu{
+
+    menu {
         float: right;
     }
-    menu li{
-        display: inline-block;
+
+    menu li {
         padding: 0 1.8vw;
     }
-    h1 { font-size: 2.5em }
-    h5 { 
-        text-align: right;
-        padding: 10px 20px;
-    }
-    #title { 
+
+    #title {
+        bottom: 140px;
         width: initial;
         left: 100px;
+        padding: 0;
     }
-    .row::after {
-        display: table;
-        content: '';
-        clear: both;
+
+    #about3 {
+        padding: 66px 40px;
     }
-    .col100{ width: 100%;}
-    .col25{ width: 25%;}
-    .col33 { width: 33.33%; }
-    .col66 { width: 66.66%; }
-    .fleft{ float: left; }
-    .fright { float: right;}
+
+    #about3 .col33 {
+        padding: 22px 25px;
+    }
+
+    .vh50 {
+        height: 50vh;
+    }
+
+    .vh100 {
+        height: 100vh;
+    }
+
+    footer .txt {
+        padding: 180px 0;
+    }
+
+    footer .txt #p1 {
+        font-size: 2.8em;
+    }
 }
